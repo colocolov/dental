@@ -1,3 +1,21 @@
 <footer class="footer">
-  <div class="container footer__container">Footer</div><!-- /.container -->
+  <div class="container footer__container">
+    <div class="footer__logo">
+      <img src="@img/logo-footer.svg" loading="lazy" width="234" height="85" alt="Logo">
+    </div>
+    <div class="footer__block">
+      <a href="#" class="footer__link">Адрес: Щусева 23А</a>
+      <a href="mailto:hsd@gmail.com" class="footer__link">Почта: hsd@gmail.com</a>
+    </div>
+    <div class="footer__block">
+      <a href="tel:+37368375599" class="footer__link">Телефон: +373 (68) 37 55 99</a>
+      <a href="#" class="footer__link">Факс: +373 (68) 37 55 99</a>
+    </div>
+    <div class="footer__block footer__block--last">
+      <span>График работы: 8:00 - 17:00</span>
+      <span>Пн - Пт</span>
+      @include('components/_social.html')
+    </div>
+
+  </div><!-- /.container -->
 </footer><!-- /.footer -->

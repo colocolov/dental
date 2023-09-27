@@ -28,10 +28,30 @@
     <div class="header__menu menu">
       <nav class="menu__body" title="Main navigation">
         <ul class="menu__list">
-          <li class="menu__item"><a class="menu__link" href="./">Home</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Contacts</a></li>
+          <li class="menu__item"><a class="menu__link" href="./">Главная</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Услуги</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Обслуживание</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
         </ul>
       </nav>
+
+
+      <!-- <div class="currency-language"> -->
+      <div class="language-menu">
+        <ul id="menu-languages">
+          <li class="menu-item-language wpml-ls-item wpml-ls-current-language">
+            <a href="#">Ru</a>
+            <ul class="sub-menu language-dropdown">
+              <li class="menu-item-language wpml-ls-item"><a href="#">Ro</a></li>
+              <li class="menu-item-language wpml-ls-item"><a href="#">En</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- </div> -->
+
+
       <button type="button" aria-label="Open Menu" aria-expanded="false" class="menu__icon">
         <span></span>
         <span></span>
@@ -42,11 +62,69 @@
 </header><!-- /.header -->
 
     <main class="main">
-      Hello, friend!
+      <section class="hero">
+
+  <div class="hero__clip">
+    <video
+           src="files/video/main_video.mp4"
+           playsinline
+           muted
+           autoplay
+           loop
+           class="hero__video"></video>
+  </div>
+
+  <div class="hero__container">
+    <h1 class="hero__title">Healthy Smile <span>Design</span><sup>Lab</sup></h1>
+    <div class="hero__description">Зубная лаборатория специализируется на производстве высококачественных зубов. Мы
+      используем только самые лучшие
+      материалы, чтобы создать оригинальные и прочные зубы, которые полностью соответствуют потребностям и ожиданиям
+      клиентов.
+      Команда лаборатории обладает большим опытом и стремится обеспечить высокую точность в каждом изготовленном зубе.
+    </div>
+    <div class="hero__btns">
+      <a href="#" class="btn reset-btn hero__btn hero__btn--order">заявка</a>
+      <a href="#" class="btn reset-btn hero__btn">доставка</a>
+    </div>
+  </div><!-- /.hero__container -->
+</section><!-- /.hero -->
     </main>
 
     <footer class="footer">
-  <div class="container footer__container">Footer</div><!-- /.container -->
+  <div class="container footer__container">
+    <div class="footer__logo">
+      <img src="images/logo-footer.svg" loading="lazy" width="234" height="85" alt="Logo">
+    </div>
+    <div class="footer__block">
+      <a href="#" class="footer__link">Адрес: Щусева 23А</a>
+      <a href="mailto:hsd@gmail.com" class="footer__link">Почта: hsd@gmail.com</a>
+    </div>
+    <div class="footer__block">
+      <a href="tel:+37368375599" class="footer__link">Телефон: +373 (68) 37 55 99</a>
+      <a href="#" class="footer__link">Факс: +373 (68) 37 55 99</a>
+    </div>
+    <div class="footer__block footer__block--last">
+      <span>График работы: 8:00 - 17:00</span>
+      <span>Пн - Пт</span>
+      <ul class="footer__social social">
+  <li>
+    <a href="#" target="_blank">
+      <svg class="" aria-hidden="true">
+        <use xlink:href="images/icons/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="#" target="_blank">
+      <svg class="" aria-hidden="true">
+        <use xlink:href="images/icons/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+    </div>
+
+  </div><!-- /.container -->
 </footer><!-- /.footer -->
   </div><!-- /.wrapper -->
 </body>

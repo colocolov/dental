@@ -3,3 +3,37 @@
   padding: 60px 0
   color: $white
 
+  &__container
+    display: flex
+    gap: 115px
+
+  &__block
+    display: flex
+    flex-direction: column
+    a
+      position: relative
+      &:not(:last-child)
+        margin-bottom: 20px
+      // нижняя линия при наведении
+      &::before
+        position: absolute
+        content: ''
+        display: block
+        bottom: -6px
+        width: 0%
+        height: 2px
+        background-color: $white
+        transition: width 0.5s ease
+      @media (any-hover: hover)
+        &:hover
+          &::before
+            width: 100%
+    &--last
+      align-items: flex-end
+      span
+        margin-bottom: 20px
+
+  &__social
+    a::before
+      display: none
+      position: relative
