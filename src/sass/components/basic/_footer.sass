@@ -5,7 +5,17 @@
 
   &__container
     display: flex
-    gap: 115px
+    justify-content: space-between
+    gap: 30px
+    @include mediaTablet
+      flex-wrap: wrap
+
+  &__logo
+    flex-shrink: 0
+    @include mediaTablet
+      width: 45%
+    @include mediaPhoneMid
+      width: 95%
 
   &__block
     display: flex
@@ -32,6 +42,12 @@
       align-items: flex-end
       span
         margin-bottom: 20px
+      @include mediaTablet
+      align-items: flex-start
+    @include mediaTablet
+      width: 45%
+    @include mediaPhoneMid
+      width: 95%
 
   &__social
     a::before

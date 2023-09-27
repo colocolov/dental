@@ -1,8 +1,10 @@
 .hero
+  --height: 800px
+
   position: relative
   height: 100vh
   //height: calc(100vh - 70px - 138px)
-  min-height: 800px
+  min-height: var(--height)
   background: $white url("../images/bg/hero.jpg") center / cover no-repeat
   overflow: hidden
   &::before
@@ -14,13 +16,16 @@
     height: 100%
     background: $gradient-grey
     z-index: 1
+  @include mediaPhone
+    --height: 600px
+    height: var(--height)
 
   &__clip
     position: absolute
     top: 0
     bottom: 0
     left: 0
-    height: 800px
+    height: var(--height)
     width: 100%
     filter: blur(0px)
     background: url('../images/bg/hero.jpg') no-repeat center / cover
@@ -61,9 +66,11 @@
       // right: 0
 
   &__description
-    width: 636px
+    max-width: 636px
     color: $white
     margin-bottom: 20px
   &__btn
     &--order
       margin-right: 50px
+    @include mediaPhoneSm
+      margin-bottom: 20px

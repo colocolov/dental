@@ -234,11 +234,17 @@ input {
 @media screen and (max-width: 991.98px) {
   .header__logo {
     margin-right: 15%;
+    z-index: 10;
   }
 }
 .header__menu {
   width: 100%;
   justify-content: space-between;
+}
+@media screen and (max-width: 767.98px) {
+  .header__menu {
+    justify-content: flex-end;
+  }
 }
 
 .menu {
@@ -258,6 +264,10 @@ input {
     background-color: rgba(0, 71, 103, 0.9);
     overflow: auto;
     transition: right 0.5s ease 0s;
+    z-index: 3;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .menu__body::before {
     content: "";
@@ -285,7 +295,8 @@ input {
 @media (max-width: 768px) {
   .menu__list {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: flex-start;
   }
 }
 .menu__item {
@@ -388,6 +399,12 @@ input {
   z-index: 99;
   margin-left: 30px;
 }
+@media screen and (max-width: 767.98px) {
+  .language-menu {
+    margin-left: auto;
+    margin-bottom: 40px;
+  }
+}
 
 .language-menu > ul {
   display: inline-block;
@@ -410,6 +427,13 @@ input {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 767.98px) {
+  .menu-item-language {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .language-dropdown {
   background-color: #f5f5f5;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
@@ -420,6 +444,17 @@ input {
   z-index: 100;
   left: -47px;
 }
+@media screen and (max-width: 767.98px) {
+  .language-dropdown {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 10;
+    box-shadow: none;
+  }
+}
 
 .language-dropdown a {
   color: #000;
@@ -429,11 +464,19 @@ input {
   padding: 10px 0;
   text-transform: capitalize;
 }
-
-.language-menu > ul > li:hover .language-dropdown {
-  display: block;
+@media screen and (max-width: 767.98px) {
+  .language-dropdown a {
+    padding: 6px 0;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
 }
 
+@media (min-width: 768px) {
+  .language-menu > ul > li:hover .language-dropdown {
+    display: block;
+  }
+}
 .language-dropdown a {
   padding: 8px 25px !important;
   cursor: pointer;
@@ -460,9 +503,10 @@ input {
 }
 
 .hero {
+  --height: 800px;
   position: relative;
   height: 100vh;
-  min-height: 800px;
+  min-height: var(--height);
   background: #FFFFFF url("../images/bg/hero.jpg") center/cover no-repeat;
   overflow: hidden;
 }
@@ -476,12 +520,18 @@ input {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0.03%, rgba(0, 0, 0, 0.2) 99.97%);
   z-index: 1;
 }
+@media screen and (max-width: 767.98px) {
+  .hero {
+    --height: 600px;
+    height: var(--height);
+  }
+}
 .hero__clip {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  height: 800px;
+  height: var(--height);
   width: 100%;
   filter: blur(0px);
   background: url("../images/bg/hero.jpg") no-repeat center/cover;
@@ -523,12 +573,17 @@ input {
   display: inline-block;
 }
 .hero__description {
-  width: 636px;
+  max-width: 636px;
   color: #FFFFFF;
   margin-bottom: 20px;
 }
 .hero__btn--order {
   margin-right: 50px;
+}
+@media screen and (max-width: 479.98px) {
+  .hero__btn {
+    margin-bottom: 20px;
+  }
 }
 
 .btn-reset {
@@ -600,7 +655,26 @@ a.btn:focus {
 }
 .footer__container {
   display: flex;
-  gap: 115px;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__container {
+    flex-wrap: wrap;
+  }
+}
+.footer__logo {
+  flex-shrink: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__logo {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .footer__logo {
+    width: 95%;
+  }
 }
 .footer__block {
   display: flex;
@@ -629,9 +703,20 @@ a.btn:focus {
 }
 .footer__block--last {
   align-items: flex-end;
+  align-items: flex-start;
 }
 .footer__block--last span {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__block {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .footer__block {
+    width: 95%;
+  }
 }
 .footer__social a::before {
   display: none;
