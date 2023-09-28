@@ -1,0 +1,118 @@
+.contact
+  &__wrapper
+    background: url("../images/bg/map.svg") center / cover no-repeat
+    padding: 298px 0
+  &__container
+    padding: 0 40px
+    display: flex
+    justify-content: space-between
+
+
+  &__mes
+    padding: 40px
+    position: relative
+    color: $blue
+    margin-right: 35px
+    width: 45.588235% // 620/1360
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 40px
+      height: 40px
+      border-top: solid 1px $blue
+      border-left: solid 1px $blue
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 40px
+      height: 40px
+      border-bottom: solid 1px $blue
+      border-right: solid 1px $blue
+
+  &__form-head
+    font-weight: 700
+    margin-bottom: 10px
+
+  &__form-message
+    margin-bottom: 20px
+    max-width: 315px
+
+  &__form
+  &__top
+    display: flex
+    justify-content: space-between
+    width: 100%
+    gap: 40px
+    margin-bottom: 40px
+  &__line
+    border-bottom: 1px solid $blue
+    flex: 1 1 48%
+    height: 34px
+  &__input
+    background-color: transparent
+    height: 34px
+    width: 100%
+    transition: all 0.3s ease
+    text-transform: lowercase
+    // width: 250px
+    &::placeholder
+      font-family: 'Montserrat'
+      color: rgba($blue, 0.6)
+      // transition: color 0.3s ease
+    &:focus
+      border: 1px solid $blue
+      padding-right: 10px
+      padding-left: 10px
+      // transition: all 0.3s ease
+  &__send
+    align-self: flex-start
+    @media (any-hover: hover)
+      &:hover
+        color: $blue !important
+
+
+
+
+
+  &__data
+    background-color: $blue
+    padding: 20px
+    color: $white
+    // max-width: 305px
+    // min-width: 400px
+    width: 29.411765% // 400/1360
+
+  &__city
+    font-weight: 700
+    margin-bottom: 50px
+
+  &__adress
+    margin-bottom: 50px
+    a
+      display: block
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  &__us
+    color: $blue
+
+
+
+
+.wpcf7-form
+  display: flex
+  flex-direction: column
+.wpcf7 .wpcf7-response-output
+  margin-right: 0 !important
+  margin-left: 0 !important
+  padding: 17px !important
+  font-size: 16px
+  order: 1
+.wpcf7-not-valid-tip
+  font-weight: 600
+  position: relative
+  bottom: 6px

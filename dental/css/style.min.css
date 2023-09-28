@@ -180,6 +180,78 @@ input {
   min-width: 0;
 }
 
+.top__main {
+  position: relative;
+}
+.top__main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.top__container {
+  height: 300px;
+  background-color: #d3d3d3;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767.98px) {
+  .top__container {
+    height: 200px;
+  }
+}
+.top__head {
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 30px 40px;
+  position: relative;
+  color: #FFFFFF;
+  z-index: 3;
+}
+.top__head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-top: solid 1px #FFFFFF;
+  border-left: solid 1px #FFFFFF;
+}
+.top__head::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-bottom: solid 1px #FFFFFF;
+  border-right: solid 1px #FFFFFF;
+}
+.top__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 300px;
+  width: 100%;
+}
+.top__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 767.98px) {
+  .top__img {
+    height: 200px;
+  }
+}
+
 .footer {
   flex: 0 0 auto;
 }
@@ -577,6 +649,9 @@ input {
   color: #FFFFFF;
   margin-bottom: 20px;
 }
+.hero__btns {
+  color: #FFFFFF;
+}
 .hero__btn--order {
   margin-right: 50px;
 }
@@ -584,6 +659,128 @@ input {
   .hero__btn {
     margin-bottom: 20px;
   }
+}
+
+.contact__wrapper {
+  background: url("../images/bg/map.svg") center/cover no-repeat;
+  padding: 298px 0;
+}
+.contact__container {
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact__mes {
+  padding: 40px;
+  position: relative;
+  color: #004767;
+  margin-right: 35px;
+  width: 45.588235%;
+}
+.contact__mes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-top: solid 1px #004767;
+  border-left: solid 1px #004767;
+}
+.contact__mes::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-bottom: solid 1px #004767;
+  border-right: solid 1px #004767;
+}
+.contact__form-head {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.contact__form-message {
+  margin-bottom: 20px;
+  max-width: 315px;
+}
+.contact__top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.contact__line {
+  border-bottom: 1px solid #004767;
+  flex: 1 1 48%;
+  height: 34px;
+}
+.contact__input {
+  background-color: transparent;
+  height: 34px;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+}
+.contact__input::placeholder {
+  font-family: "Montserrat";
+  color: rgba(0, 71, 103, 0.6);
+}
+.contact__input:focus {
+  border: 1px solid #004767;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.contact__send {
+  align-self: flex-start;
+}
+@media (any-hover: hover) {
+  .contact__send:hover {
+    color: #004767 !important;
+  }
+}
+.contact__data {
+  background-color: #004767;
+  padding: 20px;
+  color: #FFFFFF;
+  width: 29.411765%;
+}
+.contact__city {
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.contact__adress {
+  margin-bottom: 50px;
+}
+.contact__adress a {
+  display: block;
+}
+.contact__adress a:not(:last-child) {
+  margin-bottom: 10px;
+}
+.contact__us {
+  color: #004767;
+}
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.wpcf7 .wpcf7-response-output {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding: 17px !important;
+  font-size: 16px;
+  order: 1;
+}
+
+.wpcf7-not-valid-tip {
+  font-weight: 600;
+  position: relative;
+  bottom: 6px;
 }
 
 .btn-reset {
@@ -594,27 +791,34 @@ input {
   outline: none;
 }
 
-a.btn {
-  align-self: center;
+.btn {
   display: inline-block;
   background: #004767;
   border-radius: 5px;
-  padding: 8px 33px;
+  padding: 13px 33px;
   color: #FFFFFF;
   font-family: "Montserrat";
   text-align: center;
   border: 2px solid transparent;
   transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
-a.btn:focus {
+.btn:focus {
   outline: none;
 }
-@media (min-width: 992px) {
-  a.btn:hover {
+@media (any-hover: hover) {
+  .btn:hover {
     background: transparent;
     color: #FFFFFF;
     border: 2px solid #004767;
   }
+}
+.btn-white {
+  color: #004767;
+  background: #FFFFFF;
+}
+.btn-white:hover {
+  background: transparent;
+  border: 2px solid #FFFFFF;
 }
 
 .navigation {
@@ -682,6 +886,7 @@ a.btn:focus {
 }
 .footer__block a {
   position: relative;
+  width: fit-content;
 }
 .footer__block a:not(:last-child) {
   margin-bottom: 20px;

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title":"Contact Page" })
+
+<body class="page__body">
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <main class="main">
+
+      @include('html/components/_head.html', {
+      "head":"Контакты",
+      "img-url":"@img/main/contacts.jpg"
+      })
+
+
+
+
+
+      <div class="contact__wrapper">
+
+        <div class="contact__container">
+
+          <div class="contact__mes">
+            <h3 class="contact__form-head">Остались вопросы?</h3>
+            <div class="contact__form-message">Заполните форму и мы свяжемся с вами для консультации</div>
+            <form action="#" class="contact__form wpcf7-form">
+
+              <div class="contact__top">
+                <div class="contact__line">
+                  <input id="email" class="contact__input" type="text" placeholder="e-mail">
+                </div>
+                <div class="contact__line">
+                  <input id="number" class="contact__input" type="email" placeholder="tel">
+                </div>
+              </div><!-- /.contact__top -->
+              <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-reset contact__send"
+                     value="отправить">
+            </form>
+          </div><!-- /.contact__mes -->
+
+
+          <div class="contact__data">
+            <div class="contact__city">
+              Moldova, Chisinau
+            </div>
+            <div class="contact__adress">
+              <a href="#" class="contact__link">Strada Alexei Sciusev 23A</a>
+              <a href="tel:+37369400398" class="contact__link">+373 694 00 398</a>
+              <a href="mailto:hsd@gmail.com" class="contact__link">hsd@gmail.com</a>
+            </div>
+            <div class="contact__us">
+              <a href="#" class="btn btn-reset btn-white contact__btn">связяться</a>
+            </div>
+
+          </div><!-- /.contact__data -->
+
+        </div>
+
+      </div><!-- /.contact__wrapper -->
+
+
+
+    </main>
+
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>
