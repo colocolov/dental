@@ -2,11 +2,14 @@
   &__wrapper
     background: url("../images/bg/map.svg") center / cover no-repeat
     padding: 298px 0
+    @include mediaTablet
+      padding: 40px 0
   &__container
     padding: 0 40px
     display: flex
     justify-content: space-between
-
+    @include mediaTablet
+      flex-direction: column
 
   &__mes
     padding: 40px
@@ -32,6 +35,12 @@
       height: 40px
       border-bottom: solid 1px $blue
       border-right: solid 1px $blue
+    @include mediaTablet
+      margin-right: 0
+      margin-bottom: 80px
+      width: 100%
+    @include mediaPhoneMid
+      padding: 20px
 
   &__form-head
     font-weight: 700
@@ -48,6 +57,8 @@
     width: 100%
     gap: 40px
     margin-bottom: 40px
+    @include mediaPhoneMid
+      flex-direction: column
   &__line
     border-bottom: 1px solid $blue
     flex: 1 1 48%
@@ -75,9 +86,6 @@
         color: $blue !important
 
 
-
-
-
   &__data
     background-color: $blue
     padding: 20px
@@ -85,6 +93,12 @@
     // max-width: 305px
     // min-width: 400px
     width: 29.411765% // 400/1360
+    @include mediaTablet
+      width: 400px
+    @include mediaPhoneSm
+      width: 100%
+
+
 
   &__city
     font-weight: 700

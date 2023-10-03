@@ -180,78 +180,6 @@ input {
   min-width: 0;
 }
 
-.top__main {
-  position: relative;
-}
-.top__main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 2;
-}
-.top__container {
-  height: 300px;
-  background-color: #d3d3d3;
-  display: flex;
-  align-items: center;
-}
-@media screen and (max-width: 767.98px) {
-  .top__container {
-    height: 200px;
-  }
-}
-.top__head {
-  font-weight: 500;
-  line-height: 1.4;
-  padding: 30px 40px;
-  position: relative;
-  color: #FFFFFF;
-  z-index: 3;
-}
-.top__head::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border-top: solid 1px #FFFFFF;
-  border-left: solid 1px #FFFFFF;
-}
-.top__head::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  border-bottom: solid 1px #FFFFFF;
-  border-right: solid 1px #FFFFFF;
-}
-.top__img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 300px;
-  width: 100%;
-}
-.top__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media screen and (max-width: 767.98px) {
-  .top__img {
-    height: 200px;
-  }
-}
-
 .footer {
   flex: 0 0 auto;
 }
@@ -293,6 +221,14 @@ input {
   background-color: #004767;
   color: #FFFFFF;
 }
+@media screen and (max-width: 767.98px) {
+  .header {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
@@ -309,6 +245,11 @@ input {
     z-index: 10;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .header__logo {
+    display: none;
+  }
+}
 .header__menu {
   width: 100%;
   justify-content: space-between;
@@ -316,6 +257,11 @@ input {
 @media screen and (max-width: 767.98px) {
   .header__menu {
     justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header__menu {
+    justify-content: center;
   }
 }
 
@@ -333,7 +279,7 @@ input {
     width: 100%;
     height: 100%;
     padding: 150px 30px 50px 70px;
-    background-color: rgba(0, 71, 103, 0.9);
+    background-color: rgba(0, 71, 103, 0.99);
     overflow: auto;
     transition: right 0.5s ease 0s;
     z-index: 3;
@@ -418,6 +364,7 @@ input {
 }
 .menu__icon {
   display: none;
+  transition: all 0.5s ease;
 }
 @media (max-width: 768px) {
   .menu__icon {
@@ -449,6 +396,12 @@ input {
   top: auto;
   bottom: 0;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, background-color 0.5s ease-out;
+}
+.menu__icon._active {
+  position: absolute;
+  top: -50px;
+  right: 30px;
+  transition: all 0.5s ease;
 }
 .menu__icon._active span {
   transform: scale(0);
@@ -562,6 +515,79 @@ input {
   color: #FFFFFF !important;
 }
 
+.top__main {
+  position: relative;
+}
+.top__main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.top__container {
+  height: 300px;
+  background-color: #d3d3d3;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767.98px) {
+  .top__container {
+    height: 900px;
+    justify-content: center;
+  }
+}
+.top__head {
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 30px 40px;
+  position: relative;
+  color: #FFFFFF;
+  z-index: 2;
+}
+.top__head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-top: solid 1px #FFFFFF;
+  border-left: solid 1px #FFFFFF;
+}
+.top__head::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-bottom: solid 1px #FFFFFF;
+  border-right: solid 1px #FFFFFF;
+}
+.top__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 300px;
+  width: 100%;
+}
+.top__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 767.98px) {
+  .top__img {
+    height: 900px;
+  }
+}
+
 .social {
   display: flex;
   align-items: center;
@@ -577,8 +603,7 @@ input {
 .hero {
   --height: 800px;
   position: relative;
-  height: 100vh;
-  min-height: var(--height);
+  height: var(--height);
   background: #FFFFFF url("../images/bg/hero.jpg") center/cover no-repeat;
   overflow: hidden;
 }
@@ -595,7 +620,6 @@ input {
 @media screen and (max-width: 767.98px) {
   .hero {
     --height: 600px;
-    height: var(--height);
   }
 }
 .hero__clip {
@@ -605,14 +629,12 @@ input {
   left: 0;
   height: var(--height);
   width: 100%;
-  filter: blur(0px);
+  filter: blur(5px);
   background: url("../images/bg/hero.jpg") no-repeat center/cover;
 }
 .hero__video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .hero__container {
@@ -665,10 +687,20 @@ input {
   background: url("../images/bg/map.svg") center/cover no-repeat;
   padding: 298px 0;
 }
+@media screen and (max-width: 991.98px) {
+  .contact__wrapper {
+    padding: 40px 0;
+  }
+}
 .contact__container {
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 991.98px) {
+  .contact__container {
+    flex-direction: column;
+  }
 }
 .contact__mes {
   padding: 40px;
@@ -697,6 +729,18 @@ input {
   border-bottom: solid 1px #004767;
   border-right: solid 1px #004767;
 }
+@media screen and (max-width: 991.98px) {
+  .contact__mes {
+    margin-right: 0;
+    margin-bottom: 80px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .contact__mes {
+    padding: 20px;
+  }
+}
 .contact__form-head {
   font-weight: 700;
   margin-bottom: 10px;
@@ -711,6 +755,11 @@ input {
   width: 100%;
   gap: 40px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 575.98px) {
+  .contact__top {
+    flex-direction: column;
+  }
 }
 .contact__line {
   border-bottom: 1px solid #004767;
@@ -746,6 +795,16 @@ input {
   padding: 20px;
   color: #FFFFFF;
   width: 29.411765%;
+}
+@media screen and (max-width: 991.98px) {
+  .contact__data {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 479.98px) {
+  .contact__data {
+    width: 100%;
+  }
 }
 .contact__city {
   font-weight: 700;
@@ -926,4 +985,9 @@ input {
 .footer__social a::before {
   display: none;
   position: relative;
+}
+@media screen and (max-width: 575.98px) {
+  .footer__social {
+    align-self: center;
+  }
 }

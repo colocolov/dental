@@ -2,6 +2,11 @@
   padding: 20px 0
   background-color: $blue
   color: $white
+  @include mediaPhone
+    position: absolute
+    top: 100px
+    left: 0
+    width: 100%
   &__container
     @include fx-all
     justify-content: flex-start
@@ -11,9 +16,13 @@
     @include mediaTablet
       margin-right: 15%
       z-index: 10
+    @include mediaPhone
+      display: none
   &__menu
     width: 100%
     justify-content: space-between
     @include mediaPhone
       justify-content: flex-end
+    @include mediaPhone
+      justify-content: center
 

@@ -12,7 +12,7 @@
       width: 100%
       height: 100%
       padding: 150px 30px 50px 70px
-      background-color: rgba($blue, 0.9) // ---------- ЦВЕТ ФОНА У МЕНЮ
+      background-color: rgba($blue, 0.99) // ---------- ЦВЕТ ФОНА У МЕНЮ
       overflow: auto
       transition: right 0.5s ease 0s
       z-index: 3
@@ -128,6 +128,7 @@
 
   &__icon
     display: none
+    transition: all 0.5s ease
     @media ( max-width: 768px )
       display: block
       position: relative
@@ -157,6 +158,10 @@
         bottom: 0
         transition: transform .3s ease-in-out, top .3s ease-in-out, background-color .5s ease-out
     &._active
+      position: absolute
+      top: -50px
+      right: 30px
+      transition: all 0.5s ease
       span
         transform: scale(0)
         background-color: $white // ---------- ЦВЕТ ПОЛОСОК У БУРГЕРА ПРИ ЗАКРЫТИИ
