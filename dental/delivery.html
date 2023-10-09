@@ -15,7 +15,7 @@
   <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>HSD Laboratory</title>
+  <title>Delivery Page</title>
 </head>
 
 <body class="page__body">
@@ -63,34 +63,70 @@
 </header><!-- /.header -->
 
     <main class="main">
-      <section class="hero">
 
-  <div class="hero__clip">
-    <video
-           src="files/video/main_video.mp4"
-           playsinline
-           muted
-           autoplay
-           loop
-           class="hero__video"></video>
+      <div class="top__main">
+  <div class="top__img">
+
+    <picture>
+      <source
+              srcset="images/main/delivery-mob.jpg"
+              media="(max-width: 768px)" />
+      <img src="images/main/delivery.jpg" width="1440" height="300" alt="">
+    </picture>
+
   </div>
+  <div class="top__container">
+    <div class="top__head heading">Доставка</div>
+  </div>
+</div>
 
-  <div class="hero__container">
-    <h1 class="hero__title">Healthy Smile <span>Design</span><sup>Lab</sup></h1>
-    <div class="hero__description">Зубная лаборатория специализируется на производстве высококачественных зубов. Мы
-      используем только самые лучшие
-      материалы, чтобы создать оригинальные и прочные зубы, которые полностью соответствуют потребностям и ожиданиям
-      клиентов.
-      Команда лаборатории обладает большим опытом и стремится обеспечить высокую точность в каждом изготовленном зубе.
-    </div>
-    <div class="hero__btns">
-      <a href="#" class="btn reset-btn hero__btn hero__btn--order">заявка</a>
-      <a href="#" class="btn reset-btn hero__btn">доставка</a>
-    </div>
-  </div><!-- /.hero__container -->
-</section><!-- /.hero -->
+      <div class="delivery__container">
+
+        <div class="delivery__text">
+          <h3 class="delivery__title">Условия +</h3>
+          При доставке данныхМы отправим вашу работу к 14:00 после доставкивернусь к вам на следующий рабочий
+          день!Экспресс-доставка данных PMMA Мы отправим вашу работу вам обратно в тот же рабочий день, если она будет
+          доставлена
+          к 12:00!
+        </div>
+
+
+        <form action="#" class="wpcf7-form delivery__form">
+          <div class="delivery__top">
+            <div class="delivery__line">
+              <input id="name" class="delivery__input" type="text" placeholder="Имя, Фамилия">
+            </div>
+            <!--  -->
+            <div class="delivery__line">
+              <input id="number" class="delivery__input" type="text" placeholder="Номер заказа">
+            </div>
+            <!--  -->
+            <div class="delivery__line">
+              <input id="address" class="delivery__input" type="text" placeholder="Почтовый адрес">
+            </div>
+            <!--  -->
+
+            <div class="delivery__line">
+              <input id="index" class="delivery__input" type="text" placeholder="Почтовый Индекс">
+            </div>
+            <!--  -->
+            <div class="delivery__line">
+              <input id="phone" class="delivery__input" type="text" placeholder="Телефон">
+            </div>
+            <!--  -->
+          </div><!-- /.contact__top -->
+          <div class="delivery__area">
+            <textarea name="message" id="message" placeholder="Комментарий..."></textarea>
+          </div>
+          <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-reset delivery__send"
+                 value="отправить">
+        </form>
+
+
+
+      </div><!-- /.delivery__container -->
+
     </main>
-
     <footer class="footer">
   <div class="container footer__container">
     <div class="footer__logo">

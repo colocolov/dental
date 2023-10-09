@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title":"Delivery Page" })
+
+<body class="page__body">
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <main class="main">
+
+      @include('html/components/_head.html', {
+      "head":"Доставка",
+      "img-url":"@img/main/delivery.jpg",
+      "img-url-mob":"@img/main/delivery-mob.jpg"
+      })
+
+      <div class="delivery__container">
+
+        <div class="delivery__text">
+          <h3 class="delivery__title">Условия +</h3>
+          При доставке данныхМы отправим вашу работу к 14:00 после доставкивернусь к вам на следующий рабочий
+          день!Экспресс-доставка данных PMMA Мы отправим вашу работу вам обратно в тот же рабочий день, если она будет
+          доставлена
+          к 12:00!
+        </div>
+
+
+        <form action="#" class="wpcf7-form delivery__form">
+          <div class="delivery__top">
+            <div class="delivery__line">
+              <input id="name" class="delivery__input" type="text" placeholder="Имя, Фамилия">
+            </div>
+            <!--  -->
+            <div class="delivery__line">
+              <input id="number" class="delivery__input" type="text" placeholder="Номер заказа">
+            </div>
+            <!--  -->
+            <div class="delivery__line">
+              <input id="address" class="delivery__input" type="text" placeholder="Почтовый адрес">
+            </div>
+            <!--  -->
+
+            <div class="delivery__line">
+              <input id="index" class="delivery__input" type="text" placeholder="Почтовый Индекс">
+            </div>
+            <!--  -->
+            <div class="delivery__line">
+              <input id="phone" class="delivery__input" type="text" placeholder="Телефон">
+            </div>
+            <!--  -->
+          </div><!-- /.contact__top -->
+          <div class="delivery__area">
+            <textarea name="message" id="message" placeholder="Комментарий..."></textarea>
+          </div>
+          <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-reset delivery__send"
+                 value="отправить">
+        </form>
+
+
+
+      </div><!-- /.delivery__container -->
+
+    </main>
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>

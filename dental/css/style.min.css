@@ -619,7 +619,7 @@ input {
 }
 @media screen and (max-width: 767.98px) {
   .hero {
-    --height: 600px;
+    --height: 900px;
   }
 }
 .hero__clip {
@@ -680,6 +680,106 @@ input {
 @media screen and (max-width: 479.98px) {
   .hero__btn {
     margin-bottom: 20px;
+  }
+}
+
+.delivery__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.delivery__text {
+  max-width: 50%;
+  margin-bottom: 80px;
+  color: #004767;
+}
+@media screen and (max-width: 767.98px) {
+  .delivery__text {
+    max-width: 100%;
+  }
+}
+.delivery__title {
+  margin-bottom: 10px;
+  color: #004767;
+  font-weight: 700;
+}
+.delivery__form {
+  gap: 40px;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+}
+@media (max-width: 1050px) {
+  .delivery__form {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .delivery__form {
+    flex-direction: column !important;
+  }
+}
+.delivery__top {
+  width: 48%;
+}
+@media screen and (max-width: 991.98px) {
+  .delivery__top {
+    width: 100%;
+  }
+}
+.delivery__line {
+  border-bottom: 1px solid #004767;
+  flex: 1 1 48%;
+  height: 34px;
+}
+.delivery__line:not(:last-child) {
+  margin-bottom: 20px;
+}
+.delivery__input {
+  background-color: transparent;
+  height: 34px;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+}
+.delivery__input::placeholder {
+  font-family: "Montserrat";
+  color: rgba(0, 71, 103, 0.6);
+}
+.delivery__input:focus {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.delivery__area {
+  width: 48%;
+}
+@media screen and (max-width: 991.98px) {
+  .delivery__area {
+    width: 100%;
+  }
+}
+.delivery__area textarea {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #004767;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+.delivery__area textarea::placeholder {
+  font-family: "Montserrat";
+  color: rgba(0, 71, 103, 0.6);
+  transform: translateY(210px);
+}
+.delivery__area textarea:focus {
+  outline: none;
+  border: 1px solid #004767;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+.delivery__send {
+  margin-left: auto;
+}
+@media (any-hover: hover) {
+  .delivery__send:hover {
+    color: #004767 !important;
   }
 }
 
