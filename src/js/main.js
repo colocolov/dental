@@ -6,6 +6,7 @@ import "./modules/nav.js";
 import "./modules/dinam-adap.js";
 import "./modules/founderSlider.js";
 import "./modules/counter.js";
+import "./modules/employeeSlider.js";
 
 //import * as navMenu from "./modules/nav.js";
 //import * as navMenu from "./modules/accordeon.js";
