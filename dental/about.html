@@ -15,7 +15,7 @@
   <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Delivery Page</title>
+  <title>About Page</title>
 </head>
 
 <body class="page__body">
@@ -68,64 +68,105 @@
 
     <picture>
       <source
-              srcset="images/main/delivery-mob.jpg"
+              srcset="images/main/about-mob.jpg"
               media="(max-width: 768px)" />
-      <img src="images/main/delivery.jpg" width="1440" height="300" alt="">
+      <img src="images/main/about.jpg" width="1440" height="300" alt="">
     </picture>
 
   </div>
   <div class="top__container">
-    <div class="top__head heading">Доставка</div>
+    <div class="top__head heading">О нас</div>
   </div>
 </div>
 
-      <div class="delivery__container">
-
-        <div class="delivery__text">
-          <h3 class="delivery__title">Условия +</h3>
-          При доставке данныхМы отправим вашу работу к 14:00 после доставкивернусь к вам на следующий рабочий
-          день!Экспресс-доставка данных PMMA Мы отправим вашу работу вам обратно в тот же рабочий день, если она будет
-          доставлена
-          к 12:00!
-        </div>
+      <section class="founder">
+  <div class="founder__container">
 
 
-        <form action="#" class="wpcf7-form delivery__form">
-          <div class="delivery__top">
-            <div class="delivery__line">
-              <input id="name" class="delivery__input" type="text" placeholder="Имя, Фамилия">
-            </div>
-            <!--  -->
-            <div class="delivery__line">
-              <input id="number" class="delivery__input" type="text" placeholder="Номер заказа">
-            </div>
-            <!--  -->
-            <div class="delivery__line">
-              <input id="address" class="delivery__input" type="text" placeholder="Почтовый адрес">
-            </div>
-            <!--  -->
+    <div class="founder__wrap">
+      <div class="founder__img">
+        <img src="images/team/01.jpg" width="375" height="520" alt="">
+      </div>
 
-            <div class="delivery__line">
-              <input id="index" class="delivery__input" type="text" placeholder="Почтовый Индекс">
-            </div>
-            <!--  -->
-            <div class="delivery__line">
-              <input id="phone" class="delivery__input" type="text" placeholder="Телефон">
-            </div>
-            <!--  -->
-          </div><!-- /.contact__top -->
-          <div class="delivery__area">
-            <textarea name="message" id="message" placeholder="Комментарий..."></textarea>
+      <div class="founder__info">
+        <div class="founder__position">Основатель</div>
+        <div class="founder__name">Эдуард Струженко</div>
+
+
+
+        <div class="swiper founder__slider">
+          <div class="swiper-wrapper founder__slider-wrap">
+            <div class="swiper-slide founder__slide">
+              <div class="founder__description">
+                Зубная лаборатория специализируется на производстве высококачественных зубов.
+                Мы используем только самые лучшие материалы, чтобы создать оригинальные и прочные зубы, которые
+                полностью
+                соответствуют потребностям и ожиданиям клиентов.
+                Команда лаборатории обладает большим опытом и стремится обеспечить высокую точность в каждом
+                изготовленном
+                зубе.
+              </div>
+            </div><!-- /.slide -->
+            <div class="swiper-slide founder__slide">
+              <div class="founder__description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis aliquid tempora animi. Accusantium,
+                veritatis? Architecto quaerat ullam porro nobis nesciunt!
+              </div>
+            </div><!-- /.slide -->
+            <div class="swiper-slide founder__slide">
+              <div class="founder__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, voluptatem! Voluptas, itaque dicta
+                molestias blanditiis ipsum quidem reprehenderit mollitia repudiandae facilis laboriosam exercitationem
+                in expedita.
+              </div>
+            </div><!-- /.slide -->
+          </div><!-- /.swiper-wrapper -->
+
+          <div class="navigation founder__navigation">
+            <div class="navigation__btn navigation__btn-prev founder--prev">
+              <svg class="navigation__btn-svg" aria-hidden="true">
+                <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </div><!-- /.arrow-prev -->
+            <div class="navigation__circle"></div>
+            <div class="navigation__btn navigation__btn-next founder--next">
+              <svg class="navigation__btn-svg" aria-hidden="true">
+                <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </div><!-- /.arrow-next -->
+          </div><!-- /.pagination__nav -->
+
+        </div><!-- /.swipper -->
+
+
+
+        <div class="founder__numbers">
+          <div class="founder__data">
+            <div class="founder__circle" data-min="1" data-max="10" data-time="5">10</div>
+            <span>лет опыта</span>
           </div>
-          <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-reset delivery__send"
-                 value="отправить">
-        </form>
+          <div class="founder__data">
+            <div class="founder__circle founder__circle--large" data-min="9500" data-max="10000" data-time="5">10000
+            </div>
+            <span>Клиентов</span>
+          </div>
+          <div class="founder__data">
+            <div class="founder__circle" data-min="10" data-max="23" data-time="5">23</div>
+            <span>Видов услуг</span>
+          </div>
+        </div>
+      </div>
+      <!-- /.founder__info -->
 
+    </div>
+    <!-- /.founder__wrap -->
 
+  </div><!-- /.founder__container -->
+</section><!-- /.founder -->
 
-      </div><!-- /.delivery__container -->
 
     </main>
+
     <footer class="footer">
   <div class="container footer__container">
     <div class="footer__logo">
