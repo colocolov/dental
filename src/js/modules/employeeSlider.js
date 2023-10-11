@@ -8,8 +8,8 @@ if (_vars.employeeSlider) {
   Swiper.use([Navigation, Autoplay]);
   
   // устанавливаем свой размер отступов через глобальную переменную --gap
-  const gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--gap"));
-  console.log(gap);
+  // const gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--gap"));
+  // console.log(gap);
 
   // слайдер на главной
   new Swiper(_vars.employeeSlider, {

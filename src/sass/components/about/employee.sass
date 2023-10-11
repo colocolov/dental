@@ -4,9 +4,11 @@
   padding-bottom: 80px
   color: $white
 
-  margin-bottom: 40px
-
   &__container
+    @include mediaPhoneSm
+      position: relative
+      padding-bottom: 80px
+
   &__top
     margin-bottom: 64px
     display: flex
@@ -15,6 +17,12 @@
   &__head
 
   &__navigation
+    @include mediaPhoneSm
+      position: absolute
+      bottom: 0px
+      right: 55px
+      z-index: 3
+
   &__slider
     height: 450px
 
@@ -40,6 +48,12 @@
     width: 100%
     @include mediaTablet
       padding-bottom: 100%
+      height: 100%
+    @include mediaPhone
+      padding-bottom: 93%
+    @include mediaPhoneMid
+      padding-bottom: 80%
+
 
   &__name
     font-weight: 700
