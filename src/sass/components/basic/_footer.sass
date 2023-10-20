@@ -41,10 +41,10 @@
             width: 100%
     &--last
       align-items: flex-end
+      @include mediaTablet
+        align-items: flex-start
       span
         margin-bottom: 20px
-      @include mediaTablet
-      align-items: flex-start
     @include mediaTablet
       width: 45%
     @include mediaPhoneMid

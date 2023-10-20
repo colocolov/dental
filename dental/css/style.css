@@ -917,13 +917,6 @@ a:hover {
   font-display: swap;
   font-style: normal;
 }
-@font-face {
-  font-family: "Cardo";
-  src: url("../fonts/Cardo-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
 :root {
   --widthscrollbar: 17px;
 }
@@ -1473,10 +1466,6 @@ input {
   color: #FFFFFF;
   position: relative;
 }
-.hero__title span {
-  font-weight: 400;
-  font-style: italic;
-}
 .hero__title sup {
   font-size: 14px;
   font-style: normal;
@@ -1758,6 +1747,101 @@ input {
   .delivery__send:hover {
     color: #004767 !important;
   }
+}
+
+.principle {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #004767;
+  color: #FFFFFF;
+}
+.principle__head {
+  margin-bottom: 80px;
+}
+.principle__wrap {
+  gap: 20px;
+  display: flex;
+}
+@media screen and (max-width: 1023.98px) {
+  .principle__wrap {
+    flex-wrap: wrap;
+    row-gap: 60px;
+  }
+}
+.principle__item {
+  flex: 1 1 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 1023.98px) {
+  .principle__item {
+    flex-basis: 48%;
+  }
+}
+.principle__icon {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+}
+.principle__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.principle__text {
+  padding-left: 58px;
+  padding-right: 58px;
+  position: relative;
+  text-align: center;
+  min-height: 40px;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+.principle__text p {
+  margin-bottom: -100%;
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.5s ease-in, margin-bottom 0.7s ease, height 1s;
+}
+@media (any-hover: hover) {
+  .principle__text p:hover {
+    margin-bottom: 0;
+    opacity: 1;
+    height: 100%;
+  }
+}
+.principle__text-active {
+  margin-bottom: 0 !important;
+  opacity: 1 !important;
+  height: 100% !important;
+}
+.principle__text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+}
+.principle__text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
 }
 
 .founder__wrap {
@@ -2238,7 +2322,11 @@ input {
 }
 .footer__block--last {
   align-items: flex-end;
-  align-items: flex-start;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__block--last {
+    align-items: flex-start;
+  }
 }
 .footer__block--last span {
   margin-bottom: 20px;

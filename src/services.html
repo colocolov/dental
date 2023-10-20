@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title":"Services Page" })
+
+<body class="page__body">
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <main class="main">
+
+      <section class="services">
+        <div class="services__container">
+
+          <div class="swiper services__slider">
+            <div class="swiper-wrapper services__slider-wrap">
+              <div class="swiper-slide services__slide">
+                ff
+              </div><!-- /.slide -->
+            </div><!-- /.swiper-wrapper -->
+
+            <div class="navigation services__navigation">
+              <div class="navigation__btn navigation__btn-prev services--prev">
+                <svg class="navigation__btn-svg" aria-hidden="true">
+                  <use xlink:href="images/icons/sprite.svg#arrcircle"></use>
+                </svg>
+              </div><!-- /.arrow-prev -->
+              <div class="navigation__btn navigation__btn-next services--next">
+                <svg class="navigation__btn-svg" aria-hidden="true">
+                  <use xlink:href="images/icons/sprite.svg#arrcircle"></use>
+                </svg>
+              </div><!-- /.arrow-next -->
+            </div><!-- /.pagination__nav -->
+
+          </div><!-- /.swipper -->
+
+        </div><!-- /.services__container -->
+      </section><!-- /.services -->
+
+    </main>
+
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>
