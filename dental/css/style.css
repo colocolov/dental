@@ -1434,6 +1434,12 @@ input {
     --height: 900px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .hero {
+    --height: auto;
+    padding-bottom: 100px;
+  }
+}
 .hero__clip {
   position: absolute;
   top: 0;
@@ -1457,6 +1463,11 @@ input {
   flex-direction: column;
   z-index: 2;
 }
+@media screen and (max-width: 767.98px) {
+  .hero__container {
+    padding-top: 340px;
+  }
+}
 .hero__title {
   margin-bottom: 20px;
   font-family: "Cardo";
@@ -1477,16 +1488,63 @@ input {
 .hero__description {
   max-width: 636px;
   color: #FFFFFF;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .hero__btns {
-  color: #FFFFFF;
+  display: flex;
+  gap: 20px;
 }
-.hero__btn--order {
+@media screen and (max-width: 479.98px) {
+  .hero__btns {
+    flex-wrap: wrap;
+  }
+}
+.hero__btn {
+  width: 325px;
+  transition: filter 0.5s ease;
+  overflow: hidden;
+}
+@media (any-hover: hover) {
+  .hero__btn:hover {
+    filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.25));
+  }
+  .hero__btn:hover .hero__head {
+    color: #004767;
+  }
+  .hero__btn:hover .hero__img {
+    transform: scale(1.03);
+  }
+}
+.hero__info {
+  padding: 30px;
+  background-color: #FFFFFF;
+  height: calc(100% - 130px);
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 767.98px) {
+  .hero__info {
+    padding: 15px;
+  }
+}
+.hero__img {
+  padding-bottom: 130px;
+  transition: transform 0.7s ease;
+}
+.hero__head {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.hero__text {
+  text-align: center;
+}
+.hero__text--order {
   margin-right: 50px;
 }
 @media screen and (max-width: 479.98px) {
-  .hero__btn {
+  .hero__text {
     margin-bottom: 20px;
   }
 }

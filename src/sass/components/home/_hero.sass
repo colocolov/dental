@@ -19,6 +19,9 @@
   @include mediaPhone
     --height: 900px
     // height: var(--height)
+  @include mediaPhone
+    --height: auto
+    padding-bottom: 100px
 
   &__clip
     position: absolute
@@ -44,6 +47,8 @@
     height: 100%
     flex-direction: column
     z-index: 2
+    @include mediaPhone
+      padding-top: 340px
   &__title
     margin-bottom: 20px
     font-family: 'Cardo'
@@ -66,10 +71,48 @@
   &__description
     max-width: 636px
     color: $white
-    margin-bottom: 20px
+    margin-bottom: 40px
+
   &__btns
-    color: $white
+    display: flex
+    gap: 20px
+    @include mediaPhoneSm
+      flex-wrap: wrap
+
   &__btn
+    width: 325px
+    transition: filter 0.5s ease
+    overflow: hidden
+    @media (any-hover: hover)
+      &:hover
+        filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.25))
+        .hero__head
+          color: $blue
+        .hero__img
+          transform: scale(1.03)
+
+  &__info
+    padding: 30px
+    background-color: $white
+    height: calc(100% - 130px)
+    display: flex
+    flex-direction: column
+    @include mediaPhone
+      padding: 15px
+
+  &__img
+    padding-bottom: 130px // 130/350
+    transition: transform 0.7s ease
+
+  &__head
+    text-align: center
+    margin-bottom: 20px
+    font-weight: 500
+    transition: color 0.3s ease
+
+  &__text
+    text-align: center
+
     &--order
       margin-right: 50px
     @include mediaPhoneSm
