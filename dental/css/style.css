@@ -1257,7 +1257,7 @@ input {
 
 .language-menu > ul > li a {
   display: block;
-  padding: 6px 0;
+  padding: 6px 0 6px 20px;
 }
 
 .language-menu > ul > li:hover ~ a {
@@ -1279,7 +1279,7 @@ input {
   position: absolute;
   top: 28px;
   z-index: 100;
-  left: -47px;
+  left: -27px;
 }
 @media screen and (max-width: 767.98px) {
   .language-dropdown {
@@ -1298,7 +1298,7 @@ input {
   display: block;
   font-size: 14px;
   line-height: 1.5em;
-  padding: 10px 0;
+  padding: 10px;
   text-transform: capitalize;
 }
 @media screen and (max-width: 767.98px) {
@@ -1313,20 +1313,17 @@ input {
   .language-menu > ul > li:hover .language-dropdown {
     display: block;
   }
+  .language-dropdown a {
+    padding: 8px 25px !important;
+    cursor: pointer;
+  }
+  .language-dropdown li:hover {
+    background-color: #004767;
+  }
+  .language-dropdown li:hover a {
+    color: #FFFFFF !important;
+  }
 }
-.language-dropdown a {
-  padding: 8px 25px !important;
-  cursor: pointer;
-}
-
-.language-dropdown li:hover {
-  background-color: #004767;
-}
-
-.language-dropdown li:hover a {
-  color: #FFFFFF !important;
-}
-
 .top__main {
   position: relative;
 }
@@ -1465,7 +1462,7 @@ input {
 }
 @media screen and (max-width: 767.98px) {
   .hero__container {
-    padding-top: 340px;
+    padding-top: 260px;
   }
 }
 .hero__title {
@@ -1497,6 +1494,7 @@ input {
 @media screen and (max-width: 479.98px) {
   .hero__btns {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .hero__btn {
@@ -1831,10 +1829,23 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+}
+@media (any-hover: hover) {
+  .principle__item:hover .principle__text p {
+    margin-bottom: 0;
+    opacity: 1;
+    height: 100%;
+  }
 }
 @media screen and (max-width: 1023.98px) {
   .principle__item {
     flex-basis: 48%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .principle__item {
+    cursor: auto;
   }
 }
 .principle__icon {
@@ -1861,20 +1872,12 @@ input {
   min-height: 40px;
   height: auto;
   overflow: hidden;
-  cursor: pointer;
 }
 .principle__text p {
   margin-bottom: -100%;
   opacity: 0;
   height: 0;
   transition: opacity 0.5s ease-in, margin-bottom 0.7s ease, height 1s;
-}
-@media (any-hover: hover) {
-  .principle__text p:hover {
-    margin-bottom: 0;
-    opacity: 1;
-    height: 100%;
-  }
 }
 .principle__text-active {
   margin-bottom: 0 !important;
@@ -2000,15 +2003,22 @@ input {
   flex-direction: column;
   align-items: center;
   margin-left: 28px;
-  margin-bottom: 20px;
+}
+.founder__data span {
+  text-align: center;
 }
 @media screen and (max-width: 991.98px) {
   .founder__data {
     margin-left: 15px;
   }
 }
-.founder__data span {
-  text-align: center;
+@media screen and (max-width: 479.98px) {
+  .founder__data {
+    margin-bottom: 20px;
+  }
+  .founder__data:first-child {
+    width: 100%;
+  }
 }
 .founder__circle {
   padding: 19px 16px;

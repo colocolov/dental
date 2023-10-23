@@ -1,6 +1,5 @@
 .founder
 
-
   &__wrap
     padding-top: 80px
     padding-bottom: 80px
@@ -79,12 +78,15 @@
     flex-direction: column
     align-items: center
     margin-left: 28px
+    span
+      text-align: center
     @include mediaTablet
       margin-left: 15px
     @include mediaPhoneSm
-    margin-bottom: 20px
-    span
-      text-align: center
+      margin-bottom: 20px
+      &:first-child
+        width: 100%
+
 
   &__circle
     padding: 19px 16px

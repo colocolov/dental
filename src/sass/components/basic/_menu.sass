@@ -220,7 +220,7 @@
 
 .language-menu > ul > li a
   display: block
-  padding: 6px 0
+  padding: 6px 0 6px 20px
 
 .language-menu > ul > li:hover ~ a
   text-decoration: underline
@@ -240,7 +240,7 @@
   position: absolute
   top: 28px
   z-index: 100
-  left: -47px
+  left: -27px
   @include mediaPhone
     display: flex
     position: relative
@@ -255,7 +255,7 @@
   display: block
   font-size: 14px
   line-height: 1.5em
-  padding: 10px 0
+  padding: 10px
   text-transform: capitalize
   @include mediaPhone
     padding: 6px 0
@@ -266,11 +266,11 @@
   .language-menu > ul > li:hover .language-dropdown
     display: block
 
-.language-dropdown a
-  // display: block
-  padding: 8px 25px !important
-  cursor: pointer
-.language-dropdown li:hover
-  background-color: $blue
-.language-dropdown li:hover a
-  color: $white !important
+  .language-dropdown a
+    // display: block
+    padding: 8px 25px !important
+    cursor: pointer
+  .language-dropdown li:hover
+    background-color: $blue
+  .language-dropdown li:hover a
+    color: $white !important
