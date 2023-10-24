@@ -2254,6 +2254,52 @@ input {
   }
 }
 
+.works {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.works__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 80px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767.98px) {
+  .works__wrap {
+    justify-content: center;
+  }
+}
+.works__item {
+  flex: 1 1 325px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 16px;
+  cursor: pointer;
+  max-width: 450px;
+}
+@media (any-hover: hover) {
+  .works__item:hover .works__img {
+    transform: scale(1.02);
+  }
+}
+.works__title {
+  color: #004767;
+  transition: color 0.3s;
+  font-family: Manrope;
+  font-size: 30px;
+  font-weight: 700;
+}
+@media (any-hover: hover) {
+  .works__title:hover {
+    color: #004767;
+  }
+}
+.works__img {
+  padding-bottom: 76.923077%;
+  margin-bottom: 10px;
+  transition: transform 0.7s ease;
+}
+
 .btn-reset {
   padding: 0;
   border: none;

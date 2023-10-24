@@ -1,0 +1,41 @@
+.works
+  padding-top: 80px
+  padding-bottom: 80px
+
+  &__container
+
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    column-gap: 20px
+    row-gap: 80px
+    justify-content: space-between
+    @include mediaPhone
+      justify-content: center
+
+  &__item
+    flex: 1 1 325px
+    border-bottom: 1px solid $black
+    padding-bottom: 16px
+    cursor: pointer
+    max-width: 450px
+    @media (any-hover: hover)
+      &:hover
+        .works__img
+          transform: scale(1.02)
+
+  &__title
+    color: $blue
+    transition: color 0.3s
+    font-family: Manrope
+    font-size: 30px
+    font-weight: 700
+    @media (any-hover: hover)
+      &:hover
+        color: $blue
+
+  &__img
+    padding-bottom: 76.923077% // 250/325
+    margin-bottom: 10px
+    transition: transform 0.7s ease
+
