@@ -1326,6 +1326,7 @@ input {
 }
 .top__main {
   position: relative;
+  background-color: #d3d3d3;
 }
 .top__main::before {
   content: "";
@@ -1341,7 +1342,6 @@ input {
 }
 .top__container {
   height: 300px;
-  background-color: #d3d3d3;
   display: flex;
   align-items: center;
 }
@@ -1486,6 +1486,9 @@ input {
   max-width: 636px;
   color: #FFFFFF;
   margin-bottom: 40px;
+}
+.hero__description p:not(:last-child) {
+  margin-bottom: 10px;
 }
 .hero__btns {
   display: flex;
@@ -1654,6 +1657,8 @@ input {
   }
 }
 .contact__data {
+  display: flex;
+  flex-direction: column;
   background-color: #004767;
   padding: 20px;
   color: #FFFFFF;
@@ -1675,6 +1680,7 @@ input {
 }
 .contact__adress {
   margin-bottom: 50px;
+  height: 100%;
 }
 .contact__adress a {
   display: block;
@@ -1702,7 +1708,6 @@ input {
 .wpcf7-not-valid-tip {
   font-weight: 600;
   position: relative;
-  bottom: 6px;
 }
 
 .delivery__container {
@@ -2259,23 +2264,20 @@ input {
   padding-bottom: 80px;
 }
 .works__wrap {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   column-gap: 20px;
   row-gap: 80px;
-  justify-content: space-between;
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 479.98px) {
   .works__wrap {
-    justify-content: center;
+    grid-template-columns: 1fr;
   }
 }
 .works__item {
-  flex: 1 1 325px;
   border-bottom: 1px solid #000;
   padding-bottom: 16px;
   cursor: pointer;
-  max-width: 450px;
 }
 @media (any-hover: hover) {
   .works__item:hover .works__img {

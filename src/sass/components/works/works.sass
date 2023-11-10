@@ -5,20 +5,20 @@
   &__container
 
   &__wrap
-    display: flex
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
+    // flex-wrap: wrap
     column-gap: 20px
     row-gap: 80px
-    justify-content: space-between
-    @include mediaPhone
-      justify-content: center
+    @include mediaPhoneSm
+      grid-template-columns: 1fr
 
   &__item
-    flex: 1 1 325px
+    // flex: 1 1 325px
     border-bottom: 1px solid $black
     padding-bottom: 16px
     cursor: pointer
-    max-width: 450px
+    // max-width: 325px
     @media (any-hover: hover)
       &:hover
         .works__img
