@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title":"Our works" })
+
+<body class="page__body page__work">
+  <div class="wrapper">
+    @include('html/header--work.html')
+
+    <main class="main">
+
+      <div class="works__top">
+        <div class="works__container works__container-top">
+          <div class="works__head heading">Керамические рестоврации</div>
+          <div class="works__text">
+            <p>Условно – съёмные протезы (All on 4 и All on 6) – самый распространенный вид протезирования при полной
+              адентии.</p>
+            <p>Вариантов протезов по концепции All on 4 и All on 6 огромное множество. Мы выполняем все виды условно –
+              съёмных
+              протезов: классические акриловые (по системе Ivocap), цельноциркониевые, цирконо–керамические, металло –
+              керамические и
+              металло – композитные.</p>
+            <p>В качестве каркасов используем: литые каркасы Co–Cr, фрезерованные титановые каркасы Procera,
+              фрезерованные каркасы
+              Trinia.</p>
+          </div>
+        </div>
+      </div>
+
+      @include('html/works/works.html')
+
+    </main>
+
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>

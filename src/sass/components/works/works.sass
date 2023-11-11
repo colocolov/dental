@@ -3,6 +3,62 @@
   padding-bottom: 80px
 
   &__container
+    &-top
+      display: flex
+      gap: 80px
+      justify-content: space-between
+      align-items: flex-start
+      @media (max-width: 700px)
+        flex-direction: column
+
+  &__top
+    padding-top: 70px
+    padding-bottom: 70px
+    @include mediaPhone
+      padding-top: 140px
+    // background-color: #d3d3d3
+
+  &__head
+    flex: 1 1 48%
+    max-width: 48%
+    margin-top: 25px
+    font-weight: 700
+    line-height: 1
+    padding: 30px 40px
+    position: relative
+    color: $blue
+    z-index: 2
+    @media (max-width: 700px)
+      max-width: 100%
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 40px
+      height: 40px
+      border-top: solid 1px $blue
+      border-left: solid 1px $blue
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 40px
+      height: 40px
+      border-bottom: solid 1px $blue
+      border-right: solid 1px $blue
+
+  &__text
+    max-width: 48%
+    flex: 1 1 48%
+    color: $blue
+    font-family: "Montserrat", sans-serif
+    @media (max-width: 700px)
+      max-width: 100%
+    p
+      &:not(:last-child)
+        margin-bottom: 7px
 
   &__wrap
     display: grid
@@ -27,7 +83,7 @@
   &__title
     color: $blue
     transition: color 0.3s
-    font-family: Manrope
+    font-family: "Manrope", sans-serif
     font-size: 30px
     font-weight: 700
     @media (any-hover: hover)

@@ -7,6 +7,15 @@
     top: 100px
     left: 0
     width: 100%
+    &-work
+      top: 0
+      & .header__logo
+        display: flex
+      & .header__menu
+        justify-content: flex-end
+      & .menu__icon._active
+        top: 26px
+
   &__container
     @include fx-all
     justify-content: flex-start
