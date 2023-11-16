@@ -1,5 +1,5 @@
 .header
-  padding: 20px 0
+  // padding: 20px 0
   background-color: $blue
   color: $white
   @include mediaPhone
@@ -19,14 +19,18 @@
   &__container
     @include fx-all
     justify-content: flex-start
+    @include mediaPhone
+      flex-direction: column
   &__logo
     flex-shrink: 0
-    margin-right: 211px
+    @include adaptiveValue('margin-right', 211, 50)
     @include mediaTablet
       margin-right: 15%
       z-index: 10
     @include mediaPhone
-      display: none
+      position: relative
+      top: -60px
+      align-self: flex-start
   &__menu
     width: 100%
     justify-content: space-between

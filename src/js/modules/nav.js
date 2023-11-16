@@ -57,18 +57,21 @@ const body = document.querySelector(".page__body");
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
+const menuLanguage = document.querySelector(".language-menu");
 if (iconMenu) {
   iconMenu.addEventListener("click", (e) => {
     body.classList.toggle("_lock");
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
+    menuLanguage.classList.toggle("_active");
   });
 }
 // закрытие при клике
 if (menuLink.length) {
   menuLink.forEach((item) => {
     item.addEventListener("click", () => {
-      removeActiveClass();
+      //removeActiveClass();
+      
     });
   });
 }
@@ -77,4 +80,5 @@ function removeActiveClass() {
   body.classList.remove("_lock");
   iconMenu.classList.remove("_active");
   menuBody.classList.remove("_active");
+  menuLanguage.classList.remove("_active");
 }

@@ -9,6 +9,9 @@
     color: $blue
     @include mediaPhone
       max-width: 100%
+    p
+      &:not(:last-child)
+        margin-bottom: 10px
   &__title
     margin-bottom: 10px
     color: $blue
@@ -16,6 +19,7 @@
 
   &__form
     gap: 40px
+    justify-content: space-between
     flex-direction: row
     flex-wrap: wrap
     @media (max-width: 1050px)
@@ -23,7 +27,7 @@
     @include mediaTablet
       flex-direction: column
   &__top
-    width: 48%
+    width: 47%
     @include mediaTablet
       width: 100%
   &__line
