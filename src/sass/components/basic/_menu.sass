@@ -5,7 +5,7 @@
   &__body
     // margin-top: -5px
     // display: flex
-    @media (max-width: 768px)
+    @include mediaPhone
       position: fixed
       top: 0
       right: -100%
@@ -41,10 +41,26 @@
     @include mediaNotebook
       flex-wrap: wrap
       // align-items: center
-    @media (max-width: 768px)
+    @include mediaPhone
       flex-direction: column
       align-items: flex-end
       justify-content: flex-start
+    // icon for submenu
+    & .menu-item-has-children > a
+      &::after
+        content: ''
+        position: relative
+        top: 5px
+        right: -4px
+        width: 11px
+        height: 11px
+        background: url("../images/icons/sprite.svg#arrow-down") center / cover no-repeat
+        @include mediaPhone
+          width: 22px
+          height: 22px
+          // padding: 7px
+          // border: 1px solid $white
+
     // submenu TEST
     & li a
       padding: 20px
@@ -56,8 +72,6 @@
         background-color: lighten($blue, 3)
         &:last-child a
           color: $white
-        & b
-          transform: rotate(180deg)
       @include mediaNotebook
         padding: 15px 10px
         margin-bottom: 7px
@@ -129,7 +143,7 @@
 
 
 
-    @media (max-width: 768px)
+    @include mediaPhone
       // margin-bottom: 40px
       font-weight: 500
       font-size: 24px
@@ -183,7 +197,7 @@
   &__icon
     display: none
     transition: all 0.5s ease
-    @media ( max-width: 768px )
+    @include mediaPhone
       display: block
       position: relative
       //flex: 0 0 32px

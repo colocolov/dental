@@ -14,7 +14,9 @@
   "author": "Stas Kolokolov",
   "license": "ISC",
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "@img/sharp-win32-x64": "^0.33.2",
+    "gulp-cli": "^2.3.0",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",

@@ -1074,7 +1074,7 @@ input {
 }
 @media (min-width: 20em) and (max-width: 86.875em) {
   .header__logo {
-    margin-right: calc(3.125rem + 10.0625 * (((100vw - 20rem)) / ((66.875))));
+    margin-right: calc(3.125rem + 10.0625 * (100vw - 20rem) / ((66.875)));
   }
 }
 @media (max-width: 20em) {
@@ -1113,7 +1113,7 @@ input {
 .menu {
   display: flex;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .menu__body {
     position: fixed;
     top: 0;
@@ -1155,11 +1155,26 @@ input {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .menu__list {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
+  }
+}
+.menu__list .menu-item-has-children > a::after {
+  content: "";
+  position: relative;
+  top: 5px;
+  right: -4px;
+  width: 11px;
+  height: 11px;
+  background: url("../images/icons/sprite.svg#arrow-down") center/cover no-repeat;
+}
+@media screen and (max-width: 767.98px) {
+  .menu__list .menu-item-has-children > a::after {
+    width: 22px;
+    height: 22px;
   }
 }
 .menu__list li a {
@@ -1173,9 +1188,6 @@ input {
 }
 .menu__list li a:hover:last-child a {
   color: #FFFFFF;
-}
-.menu__list li a:hover b {
-  transform: rotate(180deg);
 }
 @media screen and (max-width: 1023.98px) {
   .menu__list li a {
@@ -1243,7 +1255,7 @@ input {
   line-height: 1.25;
   color: #FFFFFF;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .menu__item {
     font-weight: 500;
     font-size: 24px;
@@ -1258,7 +1270,7 @@ input {
   display: none;
   transition: all 0.5s ease;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .menu__icon {
     display: block;
     position: relative;
@@ -1616,7 +1628,7 @@ input {
 }
 
 .hero {
-  --height: 800px;
+  --height: 900px;
   position: relative;
   height: var(--height);
   background: #FFFFFF url("../images/bg/hero.jpg") center/cover no-repeat;
@@ -1650,7 +1662,7 @@ input {
   left: 0;
   height: var(--height);
   width: 100%;
-  filter: blur(5px);
+  filter: blur(4px);
   background: url("../images/bg/hero.jpg") no-repeat center/cover;
 }
 .hero__video {
@@ -1661,10 +1673,11 @@ input {
 .hero__container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100%;
   flex-direction: column;
   z-index: 2;
+  padding-bottom: 20px;
 }
 @media screen and (max-width: 767.98px) {
   .hero__container {
