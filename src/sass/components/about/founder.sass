@@ -102,17 +102,23 @@
 
 
   &__slider
-    height: 190px
+    height: 270px
     display: flex
     flex-direction: column
     width: 100%
     margin-bottom: 180px
     @include mediaPhone
       margin-bottom: 40px
+    @include mediaPhoneMid
+      height: auto
+    &-wrap
+      margin-bottom: 20px
 
   &__slide
-    height: 90px
+    height: 200px
     overflow: hidden
+    @include mediaPhoneMid
+      height: auto
 
   &__navigation
     justify-content: flex-end

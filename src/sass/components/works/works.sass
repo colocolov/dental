@@ -62,10 +62,15 @@
 
   &__wrap
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
+    grid-template-columns: repeat(auto-fit, 325px)
     // flex-wrap: wrap
     column-gap: 20px
     row-gap: 80px
+    @media screen and (max-width: 1389px)
+      grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
+    @include mediaPhone
+      grid-template-columns: repeat(2, 48%)
+      row-gap: 40px
     @include mediaPhoneSm
       grid-template-columns: 1fr
 
@@ -86,6 +91,8 @@
     font-family: "Manrope", sans-serif
     font-size: 30px
     font-weight: 700
+    @include mediaPhoneMid
+      font-size: 25px
     @media (any-hover: hover)
       &:hover
         color: $blue
