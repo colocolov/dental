@@ -1,10 +1,11 @@
 .menu
   // margin-left: 50px
   display: flex
-
   &__body
     // margin-top: -5px
-    // display: flex
+    display: flex
+    justify-content: space-between
+    width: 100%
     @include mediaPhone
       position: fixed
       top: 0
@@ -243,6 +244,35 @@
           transform: rotate(45deg)
           transition: transform .3s ease-in-out, top .3s ease-in-out
 
+  &-languages
+    & li a::after
+      top: 0 !important
+    @include mediaPhone
+      align-self: flex-end
+      & li
+        display: flex
+        & a
+          width: auto
+          // order: 2
+          &:hover
+            background-color: $blue
+          &::after
+            content: none !important
+        & ul
+          // order: 1
+          width: auto
+          height: auto
+          max-height: none
+          position: relative
+          display: flex
+          align-items: center
+          top: 0
+          opacity: 1
+          background-color: $blue
+          & a
+            padding-left: 10px !important
+            &:hover
+              background-color: $blue
 
 
 // подменю  

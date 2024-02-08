@@ -1074,7 +1074,7 @@ input {
 }
 @media (min-width: 20em) and (max-width: 86.875em) {
   .header__logo {
-    margin-right: calc(3.125rem + 10.0625 * (((100vw - 20rem)) / ((66.875))));
+    margin-right: calc(3.125rem + 10.0625 * (100vw - 20rem) / ((66.875)));
   }
 }
 @media (max-width: 20em) {
@@ -1112,6 +1112,11 @@ input {
 
 .menu {
   display: flex;
+}
+.menu__body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 @media screen and (max-width: 768.98px) {
   .menu__body {
@@ -1321,6 +1326,43 @@ input {
   top: calc(50% - 2px);
   transform: rotate(45deg);
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+.menu-languages li a::after {
+  top: 0 !important;
+}
+@media screen and (max-width: 768.98px) {
+  .menu-languages {
+    align-self: flex-end;
+  }
+  .menu-languages li {
+    display: flex;
+  }
+  .menu-languages li a {
+    width: auto;
+  }
+  .menu-languages li a:hover {
+    background-color: #004767;
+  }
+  .menu-languages li a::after {
+    content: none !important;
+  }
+  .menu-languages li ul {
+    width: auto;
+    height: auto;
+    max-height: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 0;
+    opacity: 1;
+    background-color: #004767;
+  }
+  .menu-languages li ul a {
+    padding-left: 10px !important;
+  }
+  .menu-languages li ul a:hover {
+    background-color: #004767;
+  }
 }
 
 .language-menu {
