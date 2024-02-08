@@ -1207,6 +1207,9 @@ input {
     margin-bottom: 0;
   }
 }
+.menu__list li.current-menu-item a {
+  background-color: #005276;
+}
 .menu__list li ul {
   position: absolute;
   left: 0;
@@ -1904,7 +1907,6 @@ input {
 }
 .contact__input {
   background-color: transparent;
-  height: 34px;
   width: 100%;
   transition: all 0.3s ease;
   text-transform: lowercase;
@@ -2312,7 +2314,7 @@ input {
   width: 210px;
 }
 .founder__slider {
-  height: 190px;
+  height: 270px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -2323,9 +2325,22 @@ input {
     margin-bottom: 40px;
   }
 }
+@media screen and (max-width: 575.98px) {
+  .founder__slider {
+    height: auto;
+  }
+}
+.founder__slider-wrap {
+  margin-bottom: 20px;
+}
 .founder__slide {
-  height: 90px;
+  height: 200px;
   overflow: hidden;
+}
+@media screen and (max-width: 575.98px) {
+  .founder__slide {
+    height: auto;
+  }
 }
 .founder__navigation {
   justify-content: flex-end;
@@ -2613,9 +2628,20 @@ input {
 }
 .works__wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-template-columns: repeat(auto-fit, 325px);
   column-gap: 20px;
   row-gap: 80px;
+}
+@media screen and (max-width: 1389px) {
+  .works__wrap {
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  }
+}
+@media screen and (max-width: 768.98px) {
+  .works__wrap {
+    grid-template-columns: repeat(2, 48%);
+    row-gap: 40px;
+  }
 }
 @media screen and (max-width: 479.98px) {
   .works__wrap {
@@ -2638,6 +2664,11 @@ input {
   font-family: "Manrope", sans-serif;
   font-size: 30px;
   font-weight: 700;
+}
+@media screen and (max-width: 575.98px) {
+  .works__title {
+    font-size: 25px;
+  }
 }
 @media (any-hover: hover) {
   .works__title:hover {
