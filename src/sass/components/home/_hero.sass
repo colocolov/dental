@@ -22,6 +22,9 @@
   @include mediaPhone
     --height: auto
     padding-bottom: 100px
+  @include mediaPhoneSm
+    --height: 780px
+    padding-bottom: 0
 
   &__clip
     position: absolute
@@ -76,13 +79,17 @@
     p
       &:not(:last-child)
         margin-bottom: 10px
+    @include mediaPhoneSm
+      display: none
 
   &__btns
     display: flex
     gap: 20px
     @include mediaPhoneSm
-      flex-wrap: wrap
       justify-content: center
+    @media screen and (max-width: 359.98px)
+      flex-wrap: wrap
+      width: auto
 
   &__btn
     width: 325px
@@ -95,6 +102,10 @@
           color: $blue
         .hero__img
           transform: scale(1.03)
+    @include mediaPhoneSm
+      width: 48%
+    @media screen and (max-width: 359.98px)
+      width: auto
 
   &__info
     padding: 30px
@@ -114,9 +125,14 @@
     margin-bottom: 20px
     font-weight: 500
     transition: color 0.3s ease
+    @include mediaPhoneSm
+      font-size: 20px
+      margin-bottom: 0
 
   &__text
     text-align: center
+    @include mediaPhoneSm
+      display: none
 
     &--order
       margin-right: 50px
