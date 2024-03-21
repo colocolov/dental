@@ -105,7 +105,7 @@
     @include mediaPhoneSm
       width: 48%
     @media screen and (max-width: 359.98px)
-      width: auto
+      width: 46.5%
 
   &__info
     padding: 30px
@@ -114,7 +114,7 @@
     display: flex
     flex-direction: column
     @include mediaPhone
-      padding: 15px
+      padding: 15px 10px
 
   &__img
     padding-bottom: 130px // 130/350
@@ -128,6 +128,8 @@
     @include mediaPhoneSm
       font-size: 20px
       margin-bottom: 0
+    @media screen and (max-width: 360px)
+      font-size: 16px
 
   &__text
     text-align: center

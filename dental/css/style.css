@@ -1074,7 +1074,7 @@ input {
 }
 @media (min-width: 20em) and (max-width: 86.875em) {
   .header__logo {
-    margin-right: calc(3.125rem + 10.0625 * (100vw - 20rem) / ((66.875)));
+    margin-right: calc(3.125rem + 10.0625 * (((100vw - 20rem)) / ((66.875))));
   }
 }
 @media (max-width: 20em) {
@@ -1131,14 +1131,14 @@ input {
     right: -100%;
     width: 100%;
     height: calc(100vh - 0px);
-    padding: 180px 0px 50px 0px;
+    padding: 150px 0px 50px 0px;
     background-color: rgba(0, 71, 103, 0.99);
     overflow: auto;
     transition: right 0.5s ease 0s;
     z-index: 3;
-    justify-content: flex-end;
+    justify-content: unset;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .menu__body::before {
     content: "";
@@ -1146,9 +1146,10 @@ input {
     top: 0;
     right: -100%;
     width: 100%;
-    height: 74px;
+    height: 85px;
+    background-color: rgba(0, 71, 103, 0.99);
     transition: right 0.5s ease 0s;
-    z-index: 2;
+    z-index: 6;
   }
 }
 .menu__body._active {
@@ -1171,6 +1172,7 @@ input {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
+    order: 2;
   }
 }
 .menu__list .menu-item-has-children > a::after {
@@ -1221,7 +1223,7 @@ input {
   left: 0;
   width: auto;
   background-color: #004b6c;
-  z-index: 50;
+  z-index: 5;
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -1342,6 +1344,7 @@ input {
 @media screen and (max-width: 768.98px) {
   .menu-languages {
     align-self: flex-end;
+    order: 1;
   }
   .menu-languages li {
     display: flex;
@@ -1817,7 +1820,7 @@ input {
 }
 @media screen and (max-width: 359.98px) {
   .hero__btn {
-    width: auto;
+    width: 46.5%;
   }
 }
 .hero__info {
@@ -1829,7 +1832,7 @@ input {
 }
 @media screen and (max-width: 768.98px) {
   .hero__info {
-    padding: 15px;
+    padding: 15px 10px;
   }
 }
 .hero__img {
@@ -1846,6 +1849,11 @@ input {
   .hero__head {
     font-size: 20px;
     margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .hero__head {
+    font-size: 16px;
   }
 }
 .hero__text {
@@ -2186,6 +2194,7 @@ input {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 20px;
+  text-align: center;
 }
 .principle__text {
   padding-left: 58px;
@@ -2353,7 +2362,7 @@ input {
   width: 80px;
 }
 .founder__circle--large {
-  padding: 19px 52px;
+  padding: 19px 50px;
   width: 210px;
 }
 .founder__slider {
@@ -2695,6 +2704,7 @@ input {
   border-bottom: 1px solid #000;
   padding-bottom: 16px;
   cursor: pointer;
+  overflow: hidden;
 }
 @media (any-hover: hover) {
   .works__item:hover .works__img {
